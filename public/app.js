@@ -148,3 +148,24 @@ render(0);
   addEventListener("resize", req);
   frame();
 })();
+
+/* ---------- Selector de modo claro / oscuro ---------- */
+(function(){
+  const btn = document.getElementById("theme"), root = document.documentElement;
+  const mq = matchMedia("(prefers-color-scheme: dark)");
+  const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : mq.matches;
+  const sync = () => {
+    const d = isDark();
+    root.classList.toggle("is-dark", d);
+    btn.setAttribute("aria-label", d ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
+    btn.title = btn.getAttribute("aria-label");
+  };
+  btn.addEventListener("click", () => {
+    const next = isDark() ? "light" : "dark";
+    root.dataset.theme = next;
+    try { localStorage.setItem("tema", next); } catch (e) {}
+    sync();
+  });
+  mq.addEventListener && mq.addEventListener("change", sync);
+  sync();
+})();

@@ -141,3 +141,11 @@ footer{position:relative}
 .prog-link{display:inline-block;font-weight:700;font-size:.95rem;text-decoration:none;padding:8px 16px;border-radius:999px;border:2px solid var(--c);background:var(--glass)}
 .prog-link:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .prog-none{font-size:.9rem;color:var(--muted);font-style:italic}
+
+/* ---------- Selector claro / oscuro ---------- */
+.theme{flex:none;margin-left:auto;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;padding:0}
+.theme:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.theme .i-sun{display:none}
+.is-dark .theme .i-sun{display:block}
+.is-dark .theme .i-moon{display:none}
+.chips{flex:1;min-width:0}
