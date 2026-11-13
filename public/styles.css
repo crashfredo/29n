@@ -135,3 +135,9 @@ footer{position:relative}
 .cookies-btns{display:flex;gap:8px;justify-content:flex-end}
 .cookies button{font:inherit;font-weight:700;font-size:.92rem;padding:8px 16px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
 .cookies button.primary{background:var(--ink);color:var(--paper)}
+
+/* Enlace al programa de cada partido */
+.prog{margin:0 0 6px}
+.prog-link{display:inline-block;font-weight:700;font-size:.95rem;text-decoration:none;padding:8px 16px;border-radius:999px;border:2px solid var(--c);background:var(--glass)}
+.prog-link:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.prog-none{font-size:.9rem;color:var(--muted);font-style:italic}
