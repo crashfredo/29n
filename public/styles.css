@@ -128,3 +128,10 @@ footer{position:relative}
   .js .reveal{opacity:1;transform:none;transition:none}
   .chips{scroll-behavior:auto}
 }
+
+/* ---------- Aviso de cookies ---------- */
+.cookies{position:fixed;left:16px;right:76px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:25;max-width:560px;border-radius:14px;padding:16px 18px;font-size:.92rem}
+.cookies p{margin:0 0 12px}
+.cookies-btns{display:flex;gap:8px;justify-content:flex-end}
+.cookies button{font:inherit;font-weight:700;font-size:.92rem;padding:8px 16px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.cookies button.primary{background:var(--ink);color:var(--paper)}
