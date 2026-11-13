@@ -1,0 +1,6 @@
+{
+  "name": "programas-29n",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" }
+}
