@@ -11,7 +11,7 @@ No hay build ni dependencias: Vercel sirve la carpeta `public/` tal cual.
 
 ## Activar Google Analytics
 
-1. En [analytics.google.com](https://analytics.google.com) crea una propiedad GA4 con un flujo de datos web para el dominio de la web y copia el **ID de medición** (`G-XXXXXXXXXX`).
+1. En [analytics.google.com](https://analytics.google.com) crea una propiedad GA4 con un flujo de datos web para el dominio de la web y copia el **ID de medición** (`G-XXXXXXXXXX`) o el ID del contenedor de la etiqueta de Google (`GTM-XXXXXXX`).
 2. Pégalo en la constante `GA_ID` al principio de `public/track.js` y despliega.
 3. Para ver el tiempo por apartado en los informes: **Administrar → Definiciones personalizadas** y crea
    - dimensión de evento `seccion` (parámetro `seccion`),

@@ -2,15 +2,15 @@
    Mide quién abre la web (país, ciudad, dispositivo, procedencia) y cuánto
    tiempo de lectura activa pasa en cada apartado (evento "tiempo_seccion"). */
 (function () {
-  // ▼▼ Pega aquí tu ID de medición de Google Analytics (formato G-XXXXXXXXXX) ▼▼
-  const GA_ID = "";
+  // ▼▼ ID de la etiqueta de Google: G-XXXXXXXXXX (Analytics) o GTM-XXXXXXX (contenedor) ▼▼
+  const GA_ID = "GTM-N36KSCL8";
   // ▲▲ Sin ID no se carga nada ni se muestra el aviso de cookies ▲▲
 
   const KEY = "consentimiento-analitica";
   const IDLE_MS = 60000;   // sin interacción durante 1 min → se deja de contar
   const FLUSH_MS = 15000;  // envío periódico
   const prefs = document.getElementById("cookie-prefs");
-  if (!/^G-[A-Z0-9]+$/.test(GA_ID)) { const p = document.getElementById("privacidad"); if (p) p.hidden = true; return; }
+  if (!/^(G|GTM)-[A-Z0-9]+$/.test(GA_ID)) { const p = document.getElementById("privacidad"); if (p) p.hidden = true; return; }
 
   const read = () => { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
   const write = v => { try { localStorage.setItem(KEY, v); } catch (e) {} };
@@ -26,10 +26,12 @@
     // Usa alias o grupos, no nombres completos ni correos (Google lo prohíbe).
     const label = (new URLSearchParams(location.search).get("para") || "").slice(0, 40);
     if (label) gtag("set", "user_properties", { etiqueta: label });
-    gtag("config", GA_ID, { anonymize_ip: true });
+    const isGtm = GA_ID.indexOf("GTM-") === 0;
+    // Con contenedor (GTM-) la configuración vive en Google; con G- se configura aquí
+    if (!isGtm) gtag("config", GA_ID);
 
     const s = document.createElement("script");
-    s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    s.async = true; s.src = "https://www.googletagmanager.com/" + (isGtm ? "gtm.js" : "gtag/js") + "?id=" + GA_ID;
     document.head.appendChild(s);
 
     let pending = {}, lastActive = Date.now(), lastTick = Date.now();
