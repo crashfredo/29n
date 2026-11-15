@@ -6,13 +6,13 @@ const T = [
  {id:"vivienda", label:"Vivienda", d:{
    pp:"Un millón de viviendas, nueva Ley del Suelo y licencias en tres meses. IVA del 4 % en la primera vivienda para menores de 40 y “Hucha Hogar Joven” con deducción del 20 % y aval de hasta 40.000 €.",
    vox:"Derogar la Ley de Vivienda. Prioridad para españoles en vivienda protegida y ayudas. IVA del 0 % en primera vivienda nueva y ITP bonificado al 100 %. Desalojo de okupas en menos de 24 horas.",
-   psoe:"Eje central de campaña. Defiende los decretos del Gobierno: sin gastos de inmobiliaria para el inquilino, transparencia sobre grandes tenedores y suspensión de desahucios protegidos hasta 2030.",
+   psoe:"Vivienda como derecho fundamental en la Constitución. Parque público estatal de 100.000 viviendas, impuesto contra la especulación y préstamos sin intereses de hasta 50.000 € para la primera vivienda.",
    fa:"Expropiar con indemnización unas 100.000 viviendas de fondos. Índice de alquiler ligado a salarios, prórroga automática de contratos, más parque público e impuesto a la acumulación.",
    pod:"", erc:""}},
  {id:"impuestos", label:"Impuestos", d:{
    pp:"Jóvenes de 18 a 35 sin IRPF el primer año y con descuento los tres siguientes. Mínimos familiares ligados a la inflación y deducción familiar única mensual.",
    vox:"Bajar IRPF, IVA y Sociedades. Cuota cero para autónomos por debajo del SMI. Gravar las remesas al extranjero.",
-   psoe:"",
+   psoe:"Nuevos impuestos a grandes fortunas y plataformas tecnológicas; hasta el 35 % para rentas del capital de más de 300.000 €. Impuesto a los fondos buitre.",
    fa:"Más impuestos a grandes fortunas, banca y grandes empresas (unos 10.000 millones al año), sin tocar salarios ni pensiones.",
    pod:"Plan fiscal para redistribuir la riqueza, sin detalle publicado.",
    erc:"Financiación singular para Cataluña y condonación de 17.100 millones de deuda."}},
@@ -31,7 +31,7 @@ const T = [
  {id:"trabajo", label:"Trabajo", d:{
    pp:"Un único subsidio por desempleo, retirado a quien rechace una oferta sin justificación.",
    vox:"Desregulación: tres normas derogadas por cada ley nueva, silencio administrativo positivo y fin de la cita previa obligatoria.",
-   psoe:"“Mejores salarios” como eje de campaña.",
+   psoe:"Jornada de 37,5 horas y avanzar hacia las 35 por negociación colectiva, sin rebaja salarial.",
    fa:"Seguir subiendo el salario mínimo.",
    pod:"Plan laboral redistributivo, sin detalle publicado.",
    erc:"Jornada de 37,5 horas sin rebaja salarial y despido improcedente a 45 días por año."}},
